@@ -11,7 +11,7 @@ const Board = () => {
             display: "flex",
             flexWrap: "wrap"
         }}>
-            {new Array(100).fill(1).map(n => <Rect/>)}
+            {new Array(100).fill(1).map(n => <Rect/>)} 
         </div>
     )
 }

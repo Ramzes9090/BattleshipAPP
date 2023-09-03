@@ -12,3 +12,24 @@ code {
   background-color: #1b6ec2;
   border-color: #1861ac;
 }
+
+/*----------*/
+.color-board {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    gap: 2px;
+    width: 400px;
+    margin: 0 auto;
+}
+
+.row {
+    display: flex;
+}
+
+.tile {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #ccc;
+}
+
+

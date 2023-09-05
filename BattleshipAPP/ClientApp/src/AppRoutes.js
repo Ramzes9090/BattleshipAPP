@@ -18,7 +18,7 @@ const AppRoutes = [
     },
     {
         path: '/board',
-        element: <Board />
+        element: <Board/>
     }
 ];
 

@@ -1,4 +1,4 @@
-namespace BattleshipAPP
+namespace BattleshipAPP.Models
 {
     public class WeatherForecast
     {

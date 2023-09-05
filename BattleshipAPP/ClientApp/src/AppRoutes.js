@@ -1,7 +1,7 @@
 import { Counter } from "./components/Counter";
 import { FetchData } from "./components/FetchData";
 import { Home } from "./components/Home";
-import Board  from "./components/Board.js";
+import GamePage from "./components/GamePage.js";
 
 const AppRoutes = [
   {
@@ -17,8 +17,8 @@ const AppRoutes = [
     element: <FetchData />
     },
     {
-        path: '/board',
-        element: <Board/>
+        path: '/game-page',
+        element: <GamePage/>
     }
 ];
 

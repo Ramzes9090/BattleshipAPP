@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using BattleshipAPP.Models;
+using Microsoft.AspNetCore.Mvc;
 
 namespace BattleshipAPP.Controllers
 {

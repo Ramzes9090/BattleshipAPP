@@ -1,9 +1,12 @@
-﻿import React from 'react'
+﻿import React, { useState,useEffect} from 'react'
 import Square from './Square'
 
 // Represents a 10 x 10 grid of grid squares
 
-export default function Board(props) {
+export default function Board(strCol, strRow, length, horizonral) {
+
+    
+    
 
     // generates an array of 10 rows, each containing 10 GridSquares.
 
@@ -40,7 +43,9 @@ export default function Board(props) {
             }
         }
     }
-    PlaceShip(3,3,4,true)
+
+    PlaceShip(strCol, strRow, length, horizonral);
+    
     // The components generated in makeGrid are rendered in div.grid-board
 
     return (

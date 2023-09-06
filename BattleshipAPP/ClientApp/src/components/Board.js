@@ -3,10 +3,7 @@ import Square from './Square'
 
 // Represents a 10 x 10 grid of grid squares
 
-export default function Board(strCol, strRow, length, horizonral) {
-
-    
-    
+export default function Board({shipOne,shipTwo,shipThree,shipFour}) {
 
     // generates an array of 10 rows, each containing 10 GridSquares.
 
@@ -44,7 +41,11 @@ export default function Board(strCol, strRow, length, horizonral) {
         }
     }
 
-    PlaceShip(strCol, strRow, length, horizonral);
+    PlaceShip(shipOne.strCol, shipOne.strRow, shipOne.length, shipOne.horizontal);
+    PlaceShip(shipTwo.strCol, shipTwo.strRow, shipTwo.length, shipTwo.horizontal);
+    PlaceShip(shipThree.strCol, shipThree.strRow, shipThree.length, shipThree.horizontal);
+    PlaceShip(shipFour.strCol, shipFour.strRow, shipFour.length, shipFour.horizontal);
+
     
     // The components generated in makeGrid are rendered in div.grid-board
 

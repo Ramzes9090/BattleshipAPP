@@ -3,6 +3,7 @@
     public class ShipModel
     {
         public int Id { get; set; }
+        public int ClassShip { get; set; }
         public string ShipName { get; set; }
         public int StartColumn { get; set; }
         public int StartRow { get; set; }

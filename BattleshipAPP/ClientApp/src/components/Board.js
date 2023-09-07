@@ -7,7 +7,7 @@ export default function Board({shipOne,shipTwo,shipThree,shipFour}) {
 
     // generates an array of 10 rows, each containing 10 GridSquares.
 
-    const grid = []
+    const grid = [];
     for (let row = 0; row < 10; row++) {
         grid.push([])
         for (let col = 0; col < 10; col++) {
@@ -24,7 +24,6 @@ export default function Board({shipOne,shipTwo,shipThree,shipFour}) {
             }
         }
     }
-    
     function PlaceShip(strCol, strRow, long, horizontal) {
         var index = 0;
         if (horizontal) {
@@ -46,7 +45,21 @@ export default function Board({shipOne,shipTwo,shipThree,shipFour}) {
     PlaceShip(shipThree.strCol, shipThree.strRow, shipThree.length, shipThree.horizontal);
     PlaceShip(shipFour.strCol, shipFour.strRow, shipFour.length, shipFour.horizontal);
 
-    
+    const tab = [];
+    const x = 1;
+    const y = 2;
+
+    function shooting(x,y) {
+        for (let row = 0; row < 10; row++) {
+
+            for (let col = 0; col < 10; col++) {
+                if (col === x && row === y) {
+                    grid[row].splice(x, 1, <Square key={`${col}${row}`} color="3" />)
+                }
+            }
+        }
+    }
+    shooting(x, y);
     // The components generated in makeGrid are rendered in div.grid-board
 
     return (

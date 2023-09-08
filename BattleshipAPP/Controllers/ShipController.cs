@@ -15,14 +15,14 @@ namespace BattleshipAPP.Controllers
         static bool horizontalD= true;
 
         static List<int[]>  occupiedColRow = new List<int[]>();
-        
-        
-        
-        static int[] startD = RandNum.ShipFourColRow(occupiedColRow, horizontalD);
-        static int[] startC = RandNum.ShipThreeColRow(occupiedColRow, horizontalC);
-        static int[] startB = RandNum.ShipTwoColRow(occupiedColRow, horizontalB);
-        static int[] startA = RandNum.ShipOneColRow(occupiedColRow, horizontalA);
+        static List<int[]>  shootedColRow = new List<int[]>();
 
+        static int[] startD = PlacingShips.ShipFourColRow(occupiedColRow, horizontalD);
+        static int[] startC = PlacingShips.ShipThreeColRow(occupiedColRow, horizontalC);
+        static int[] startB = PlacingShips.ShipTwoColRow(occupiedColRow, horizontalB);
+        static int[] startA = PlacingShips.ShipOneColRow(occupiedColRow, horizontalA);
+
+        
 
         private static readonly IEnumerable<ShipModel> Ships = new[]
         {
@@ -46,9 +46,27 @@ namespace BattleshipAPP.Controllers
                 Console.Write(aPart[1]);
                 Console.WriteLine();
             }
-                
+            
             ShipModel[] ships = Ships.Where(i=>i.ClassShip==classShip).ToArray();
             return ships;
         }
+        [HttpGet]
+        public List<int[]> Start()
+        {
+            //GameSimulation.connectSquares(shootedColRow, occupiedColRow);
+            //foreach (int[] aPart in shootedColRow)
+            //{
+            //    Console.Write(aPart[0]);
+            //    Console.Write(" , ");
+            //    Console.Write(aPart[1]);
+            //    Console.WriteLine();
+            //}
+            int[] shoot = new int[2];
+            shoot[0] = 1;
+            shoot[1] = 2;
+            shootedColRow.Add(shoot);
+            return shootedColRow;
+        }
+
     }
 }

@@ -5,8 +5,10 @@ import ShipObj from './ShipObj';
 const GamePage = () => {
 
     const [items, setItems] = useState([]);
-    const classShip = 1;
+    const [shot, setShot] = useState([]);
 
+    const classShip = 1;
+    
     useEffect(() => {
         fetch(`ship/${classShip}`)
             .then((results) => {               
@@ -16,7 +18,7 @@ const GamePage = () => {
                 setItems(data);               
             })
     }, [])
-
+    
     var shipObjOne = '';
     var shipObjTwo = '';
     var shipObjThree = '';
@@ -53,21 +55,47 @@ const GamePage = () => {
             }
         })
     
-    console.log(shipObjOne);
-    
+    //console.log(shipObjOne);
+
+    function addFiled(a, b) {
+        tab.push(a)
+        tab.push(b)
+    }
+    var tab2 = [1, 4, 3, 2, 3, 8, 9, 9]
+    var tab = [];
+
+    var [count, setCount] = useState([]);
+
+    const handleClick = () => {
+        // Increment the count when the button is clicked
+        
+        let i = 0;
+        const interval = setInterval(() => {
+            addFiled(tab2[i],tab2[i=i+1])
+            i = i + 2;
+            setCount(count = tab)
+            console.log(count);
+            console.log(i);
+            
+            if (i > tab2.length) clearInterval(interval);
+        
+        }, 3000)
+    };
+ 
     
     return (
         <div>
+            <div className='btn ' onClick={handleClick} >Click Me</div>
             <div>
-                < Board shipOne={shipObjOne} shipTwo={shipObjTwo} shipThree={shipObjThree} shipFour={shipObjFour} />
+                < Board shipOne={shipObjOne} shipTwo={shipObjTwo} shipThree={shipObjThree} shipFour={shipObjFour} tab={ count} />
             </div>
             <br /><br />
             <div>
-                < Board shipOne={shipObjFive} shipTwo={shipObjSix} shipThree={shipObjSeven} shipFour={shipObjEight} />
+                < Board shipOne={shipObjFive} shipTwo={shipObjSix} shipThree={shipObjSeven} shipFour={shipObjEight} tab={ tab} />
             </div>
             <br /><br />
         </div>
         
-    )
-}
+            )
+}       
 export default GamePage;

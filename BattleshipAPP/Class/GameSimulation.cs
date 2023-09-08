@@ -20,7 +20,7 @@ namespace BattleshipAPP.Class
                 }
                 else
                 {
-                    //Console.WriteLine("Field already exist!");
+                    Console.WriteLine("Field already exist!");
                     Ok = false;
                 }
             }

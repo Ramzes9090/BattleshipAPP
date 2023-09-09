@@ -2,10 +2,9 @@
 import Board from './Board';
 import ShipObj from './ShipObj';
 
-const GamePage = () => {
+const GamePage = ({ tabPlayer1,tabPlayer2}) => {
 
     const [items, setItems] = useState([]);
-    const [shot, setShot] = useState([]);
 
     const classShip = 1;
     
@@ -57,41 +56,16 @@ const GamePage = () => {
     
     //console.log(shipObjOne);
 
-    function addFiled(a, b) {
-        tab.push(a)
-        tab.push(b)
-    }
-    var tab2 = [1, 4, 3, 2, 3, 8, 9, 9]
-    var tab = [];
-
-    var [count, setCount] = useState([]);
-
-    const handleClick = () => {
-        // Increment the count when the button is clicked
-        
-        let i = 0;
-        const interval = setInterval(() => {
-            addFiled(tab2[i],tab2[i=i+1])
-            i = i + 2;
-            setCount(count = tab)
-            console.log(count);
-            console.log(i);
-            
-            if (i > tab2.length) clearInterval(interval);
-        
-        }, 3000)
-    };
- 
-    
     return (
         <div>
-            <div className='btn ' onClick={handleClick} >Click Me</div>
             <div>
-                < Board shipOne={shipObjOne} shipTwo={shipObjTwo} shipThree={shipObjThree} shipFour={shipObjFour} tab={ count} />
+                <h3>Player 1</h3>
+                < Board shipOne={shipObjOne} shipTwo={shipObjTwo} shipThree={shipObjThree} shipFour={shipObjFour} tab={tabPlayer1} />
             </div>
             <br /><br />
             <div>
-                < Board shipOne={shipObjFive} shipTwo={shipObjSix} shipThree={shipObjSeven} shipFour={shipObjEight} tab={ tab} />
+                <h3>Player 2</h3>
+                < Board shipOne={shipObjFive} shipTwo={shipObjSix} shipThree={shipObjSeven} shipFour={shipObjEight} tab={ tabPlayer2} />
             </div>
             <br /><br />
         </div>

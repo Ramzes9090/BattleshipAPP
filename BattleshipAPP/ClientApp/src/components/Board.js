@@ -8,6 +8,7 @@ export default function Board({ shipOne, shipTwo, shipThree, shipFour, tab }) {
     // generates an array of 10 rows, each containing 10 GridSquares.
 
     const grid = [];
+
     function buildBoard(grid) {
         for (let row = 0; row < 10; row++) {
             grid.push([])
@@ -59,10 +60,8 @@ export default function Board({ shipOne, shipTwo, shipThree, shipFour, tab }) {
             var index2 = index + 1;
             shooting(tab[index], tab[index2])
         }
-        console.log("Shoot!");
     }
 
-    
     buildBoard(grid);
 
     PlaceShip(shipOne.strCol, shipOne.strRow, shipOne.length, shipOne.horizontal);

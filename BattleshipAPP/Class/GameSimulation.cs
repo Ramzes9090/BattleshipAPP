@@ -5,38 +5,40 @@ namespace BattleshipAPP.Class
 {
     public class GameSimulation
     {
-        public static int[] shotField(List<int[]> listField)
+        public static void connectSquares(List<int[]> listSquares, List<int[]> listShips) 
         {
-            int[] shotSquare = new int[2];
+            int index = 0;
             bool Ok = false;
             while (!Ok)
             {
-                shotSquare[0] = RandNum.RandNumber(0, 9);
-                shotSquare[1] = RandNum.RandNumber(0, 9);
-
-                if (!CheckField.checkList(listField, shotSquare))
+                int[] shotSquare = new int[2];
+                bool Okx = false;
+                while (!Okx)
                 {
+                    shotSquare[0] = RandNum.RandNumber(0, 9);
+                    shotSquare[1] = RandNum.RandNumber(0, 9);
+
+                    if (!CheckField.checkList(listSquares, shotSquare))
+                    {
+                        if (CheckField.checkList(listShips, shotSquare))
+                        {
+                            index++;
+                            Console.WriteLine("Index: " + index);
+                        }
+                        Okx = true;
+                    }
+                    else
+                    {
+
+                        Okx = false;
+                    }
+                }
+                
+                listSquares.Add(shotSquare);
+
+                if (index >= 10)
                     Ok = true;
-                }
-                else
-                {
-                    Console.WriteLine("Field already exist!");
-                    Ok = false;
-                }
-            }
-            listField.Add(shotSquare);
-            return shotSquare;
-
-        }
-
-        public static void connectSquares(List<int[]> listSquares, List<int[]> listShips) 
-        {
-            bool Ok = false;
-            while(!Ok)
-            {
-                shotField(listSquares);
-                var list = listSquares.Where(i => listShips.Contains(i)).ToList();
-                if (list.Count == listShips.Count)
+                else if (listSquares.Count == 100)
                     Ok = true;
             }
         }

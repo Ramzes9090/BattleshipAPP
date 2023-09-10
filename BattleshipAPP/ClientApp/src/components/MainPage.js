@@ -87,7 +87,7 @@ export default function MainPage() {
     
     return (
         <div>
-            <div className='btn ' onClick={handleClick} >Start Game</div>
+            <div className='btn' onClick={handleClick}  ><h2>Start Game</h2></div>
             <GamePage tabPlayer1={playerOne} tabPlayer2={playerTwo} />
         </div>
     )

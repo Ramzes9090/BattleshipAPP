@@ -81,8 +81,8 @@ export default function MainPage() {
                     alert("End Game, Player Two Win!!!");
                     clearInterval(interval);
                 }            
-            }, 100)
-        }, 300)     
+            }, 300)
+        }, 800)     
     }
     
     return (

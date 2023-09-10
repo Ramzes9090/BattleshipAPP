@@ -2,10 +2,9 @@
 import Board from './Board';
 import ShipObj from './ShipObj';
 
-const GamePage = ({ tabPlayer1,tabPlayer2}) => {
+const GamePage = ({tabPlayer1,tabPlayer2}) => {
 
     const [items, setItems] = useState([]);
-
     const classShip = 1;
     
     useEffect(() => {
@@ -69,7 +68,6 @@ const GamePage = ({ tabPlayer1,tabPlayer2}) => {
             </div>
             <br /><br />
         </div>
-        
-            )
+    )
 }       
 export default GamePage;

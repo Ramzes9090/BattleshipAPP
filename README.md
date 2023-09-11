@@ -19,16 +19,16 @@ The game is simulated by a computer on a 10x10 board. Initially, ships are rando
 Img. 1 - Boards with randomly placed ships. The game is ready for simulation.
 
 Next, when the button is pressed, each round, players choose a random tile on the enemy's board.
-![image](https://github.com/Ramzes9090/BattleshipAPP/assets/86838822/6d39bbc7-7429-4112-89bc-ce418ad0fdb9)
+![image](https://github.com/Ramzes9090/BattleshipAPP/assets/86838822/6d39bbc7-7429-4112-89bc-ce418ad0fdb9)  
 
 Img. 2 - Simulation has started. Players choses alternately squares at enemy's board.
 
 The game continues until one of them destroys every single square with their enemy's ships. 
-![image](https://github.com/Ramzes9090/BattleshipAPP/assets/86838822/1d89c04b-aa96-410e-9d9d-b61f83bcd2b9)  
+![image](https://github.com/Ramzes9090/BattleshipAPP/assets/86838822/1d89c04b-aa96-410e-9d9d-b61f83bcd2b9)    
 
 Img. 3 - Simulation with open console where logs showing which square are chosen. 
 
 When the game ends, an alert is displayed on the screen with a message which player has won.
-![image](https://github.com/Ramzes9090/BattleshipAPP/assets/86838822/57d9bb70-7426-40ee-8a6e-2b0209035337) 
+![image](https://github.com/Ramzes9090/BattleshipAPP/assets/86838822/57d9bb70-7426-40ee-8a6e-2b0209035337)   
 
 Img. 4 - The game is over. Alert informing which player will win the game.

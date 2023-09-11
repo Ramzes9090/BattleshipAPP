@@ -56,13 +56,13 @@ const GamePage = ({tabPlayer1,tabPlayer2}) => {
     //console.log(shipObjOne);
 
     return (
-        <div>
-            <div>
+        <div className="game-boards">
+            <div className="board-one">
                 <h3>Player 1</h3>
                 < Board shipOne={shipObjOne} shipTwo={shipObjTwo} shipThree={shipObjThree} shipFour={shipObjFour} tab={tabPlayer1} />
             </div>
             <br /><br />
-            <div>
+            <div className="board-two">
                 <h3>Player 2</h3>
                 < Board shipOne={shipObjFive} shipTwo={shipObjSix} shipThree={shipObjSeven} shipFour={shipObjEight} tab={ tabPlayer2} />
             </div>

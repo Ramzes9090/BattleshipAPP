@@ -10,7 +10,7 @@ export default function Board({ shipOne, shipTwo, shipThree, shipFour, tab }) {
         for (let row = 0; row < 10; row++) {
             grid.push([])
             for (let col = 0; col < 10; col++) {
-                grid[row].push(<Square key={`${col}${row}`} color="1" />);
+                grid[row].push(<Square key={`${col}${row}`} color="6" />);
             }
         }
     }
@@ -21,7 +21,7 @@ export default function Board({ shipOne, shipTwo, shipThree, shipFour, tab }) {
 
             for (let col = 0; col < 10; col++) {
                 if (col === a && row === b) {
-                    grid[row].splice(a, 1, <Square key={`${col}${row}`} color="2" />);
+                    grid[row].splice(a, 1, <Square key={`${col}${row}`} color="4" />);
                 }
             }
         }

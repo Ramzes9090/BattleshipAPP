@@ -14,21 +14,21 @@ In my project, you can observe a simulation game between two computers. It is a 
 
 # Game description and gameplay: 
 The game is simulated by a computer on a 10x10 board. Initially, ships are randomly placed on the boards. Each player has four ships of different sizes (one square, two squares, three squares, and four squares). 
-![image](https://github.com/Ramzes9090/BattleshipAPP/assets/86838822/9dc2f310-30c4-4ee0-b113-cb30acc31e30)
+![startgame](https://github.com/Ramzes9090/BattleshipAPP/assets/86838822/77bfb35a-b28e-4cec-933f-3dbff6642201)
 
 Img. 1 - Boards with randomly placed ships. The game is ready for simulation.
 
 Next, when the button is pressed, each round, players choose a random tile on the enemy's board.
-![image](https://github.com/Ramzes9090/BattleshipAPP/assets/86838822/4b0e7b3b-b70e-4d18-b07b-fa5f2cb4ba82)
+![game1](https://github.com/Ramzes9090/BattleshipAPP/assets/86838822/77c1ed54-b448-460d-9779-ed0dd1d97aae)
 
 Img. 2 - Simulation has started. Players choses alternately squares at enemy's board.
 
 The game continues until one of them destroys every single square with their enemy's ships. 
-![image](https://github.com/Ramzes9090/BattleshipAPP/assets/86838822/e7be59bc-5862-4275-b60a-6982c3a40195)
+![game2](https://github.com/Ramzes9090/BattleshipAPP/assets/86838822/2b4e09c8-4690-46f4-85e2-10a178e95a64)
 
 Img. 3 - Simulation with open console where logs showing which square are chosen. 
 
 When the game ends, an alert is displayed on the screen with a message which player has won.
-![image](https://github.com/Ramzes9090/BattleshipAPP/assets/86838822/8e59a54a-b5d8-4584-a4b0-2bc06686c07e)
+![endgame](https://github.com/Ramzes9090/BattleshipAPP/assets/86838822/f0cb2851-d7d7-4333-9403-e7ae294de8cb)
 
 Img. 4 - The game is over. Alert informing which player will win the game.
